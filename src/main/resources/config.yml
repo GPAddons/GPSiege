@@ -1,0 +1,87 @@
+siege:
+  enabled: false
+  features:
+    # On siege start/join, include all claims owned by the defender.
+    # Note that include_nearby_claims.attacker_radius will then remove claims out of range.
+    include_all_defender_claims: false
+    include_nearby_claims:
+      # On siege start, include all claims within X blocks. < 1 = only current claim
+      defender_radius: -1
+      # Attackers must be within X blocks of a claim for it to be included. < 1 = always included
+      # Note that too small a radius may cause defenders to be considered fleeing for a time instead
+      # of including the new claim they have entered.
+      attacker_radius: -1
+  # A toggle for whitelist/blacklist functionality, e.g. if only obsidian is unbreakable
+  # it is much easier to blacklist breaking obsidian.
+  siege_blocks_is_whitelist: true
+  # A list of materials used in determiningpost-siege block breakability.
+  # Supports tags, i.e. #logs -> #minecraft:logs tag
+  # All values are parsed by NamespacedKey! If no namespace is present, it is assumed to be
+  # a vanilla item, i.e. "dirt" -> "minecraft:dirt"
+  # If you're seeing issues, make sure you have the correct item ID as it appears in-inventory via F3+H.
+  siege_blocks:
+  - dirt
+  - grass_block
+  - cobblestone
+  - cobbled_deepslate
+  - gravel
+  - sand
+  - snow_block
+  - '#planks'
+  - '#logs'
+  - '#wool'
+  - '#wool_carpets'
+  - glass
+  - white_stained_glass
+  - orange_stained_glass
+  - magenta_stained_glass
+  - light_blue_stained_glass
+  - yellow_stained_glass
+  - lime_stained_glass
+  - pink_stained_glass
+  - gray_stained_glass
+  - light_gray_stained_glass
+  - cyan_stained_glass
+  - purple_stained_glass
+  - blue_stained_glass
+  - brown_stained_glass
+  - green_stained_glass
+  - red_stained_glass
+  - black_stained_glass
+  - glass_pane
+  - white_stained_glass_pane
+  - orange_stained_glass_pane
+  - magenta_stained_glass_pane
+  - light_blue_stained_glass_pane
+  - yellow_stained_glass_pane
+  - lime_stained_glass_pane
+  - pink_stained_glass_pane
+  - gray_stained_glass_pane
+  - light_gray_stained_glass_pane
+  - cyan_stained_glass_pane
+  - purple_stained_glass_pane
+  - blue_stained_glass_pane
+  - brown_stained_glass_pane
+  - green_stained_glass_pane
+  - red_stained_glass_pane
+  - black_stained_glass_pane
+  overrides:
+    siege_world:
+      enabled: true
+    hardcore_world:
+      enabled: true
+      siege_blocks_is_whitelist: false
+      siege_blocks:
+        - minecraft:obsidian
+        - minecraft:chest
+        - minecraft:trapped_chest
+        - minecraft:barrel
+        - '#minecraft:shulker_boxes'
+    hardercore_world:
+      enabled: true
+      siege_blocks_is_whitelist: false
+      siege_blocks: []
+
+
+
+

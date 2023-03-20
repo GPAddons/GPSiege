@@ -4,5 +4,12 @@ version: "${project.version}"
 api-version: "${project.api-version}"
 author: "${project.developers[0].name}"
 description: "${project.description}"
-depend:
-  - GriefPrevention
+depend: [ GriefPrevention ]
+libraries:
+  - it.unimi.dsi:fastutil:${fastutil.version}
+
+commands:
+  siege:
+    aliases: [ gpsiege ]
+    description: Main siege command
+    permission: gpsiege.siege

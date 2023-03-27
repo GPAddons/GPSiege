@@ -18,7 +18,7 @@
 
   <properties>
     <project.api-version>1.17</project.api-version>
-    <fastutil.version>8.5.8</fastutil.version>
+    <fastutil.version>8.5.12</fastutil.version>
   </properties>
 
   <repositories>
